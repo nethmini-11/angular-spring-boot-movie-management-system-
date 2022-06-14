@@ -1,0 +1,50 @@
+.navbar {
+  color: #b6b7b9;
+  background: #13151f;
+  position: relative;
+}
+
+.theme-btn:hover {
+  border: 1px solid #ff7801;
+  background: transparent;
+  color: #ff7801;
+}
+
+.mainmenu ul {
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+.mainmenu li {
+  display: inline-block;
+}
+
+.mainmenu li a.active,
+.mainmenu li a:hover {
+  color: #ff7801;
+}
+
+.navbar-toggler-icon {
+  position: absolute;
+  top: 1rem;
+  right: 15rem;
+}
+
+.login-btn {
+  position: absolute;
+  top: 1rem;
+  right: 28px;
+  background-color: rgba(178, 72, 2, 0.142);
+  color: rgb(255, 116, 2);
+}
+
+.edit-btn {
+  position: absolute;
+  top: 1rem;
+  right: 10.5rem;
+}
+
+img {
+  width: 120px;
+  height: 50px;
+}

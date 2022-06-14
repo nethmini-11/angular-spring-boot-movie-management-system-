@@ -1,0 +1,48 @@
+<section id="ticket">
+  <div class="custom-container">
+    <h6 style="color: red">{{ errorMessage }}</h6>
+    <form [formGroup]="ticketForm" (ngSubmit)="addATicket()">
+      <div class="form-row">
+        <div class="form-group">
+          <div class="input-data">
+            <input
+              type="number"
+              class="form-control"
+              formControlName="noOfSeats"
+              required
+            />
+            <div class="underline"></div>
+            <label for="">No of Seats</label>
+          </div>
+        </div>
+      </div>
+      <select class="form-select" multiple formControlName="seats">
+        <option value="">Choose Seats</option>
+        <option *ngFor="let s of seats" [ngValue]="s">
+          {{ s.seatNumber }} | {{ s.type }}
+        </option>
+      </select><br><br><br>
+      
+          <h1>
+            Make Your Payment Here
+          </h1> <br><br>
+          <h3>Seat Price List</h3><br>
+          <h6>Balcony - $10</h6>
+          <h6>Stalls - $15</h6>
+          <h6>Premium - $20</h6><br><br>
+          <button (click)="makePayment(10)" style="background-color:rgb(11, 194, 17);" class="btn btn-primary">Pay $10 to complete booking</button><br><br>
+          <button (click)="makePayment(15)" style="background-color:rgb(11, 194, 17);" class="btn btn-primary">Pay $15 to complete booking</button><br><br>
+          <button (click)="makePayment(20)" style="background-color:rgb(11, 194, 17);" class="btn btn-primary">Pay $20 to complete booking</button><br><br>
+      
+        
+      <br><br><br>
+      
+
+      
+    </form>
+    
+  </div>
+
+ 
+
+</section>

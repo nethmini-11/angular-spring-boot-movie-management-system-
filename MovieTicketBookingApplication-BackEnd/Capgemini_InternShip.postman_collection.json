@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "d6f5ad9b-37cf-43b3-85b5-e15e71a6eccb",
+		"name": "Capgemini_InternShip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Creation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/admin/registeradmin/surya/capgemini@1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"registeradmin",
+						"surya",
+						"capgemini@1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"capg@1\",\r\n  \"role\": \"customer\",\r\n  \"userid\": 0,\r\n  \"username\": \"vidhya\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/adduser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"adduser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"address\": \"AndhraPradesh\",\r\n  \"customerId\": 2,\r\n  \"customerName\": \"vidhya\",\r\n  \"email\": \"vidhya@gmail.com\",\r\n  \"mobileNumber\": \"9876543210\",\r\n  \"password\": \"capg@1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/customer/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Theatre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"managerContact\": \"9678541230\",\r\n  \"managerName\": \"thejesh\",\r\n  \"theatreCity\": \"Chennai\",\r\n  \"theatreId\": 0,\r\n  \"theatreName\": \"Kabuki\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/theatre/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"theatre",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movieDate\": \"2021-04-29\",\r\n  \"movieDescription\": \"Anime movie..\",\r\n  \"movieGenre\": \"Adventure\",\r\n  \"movieHours\": \"1.5\",\r\n  \"movieId\": 0,\r\n  \"movieLanguage\": \"Jap\",\r\n  \"movieName\": \"Demon Slayer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/movies/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"columns\": 9,\r\n  \"rows\": 10,\r\n  \"screenId\": 0,\r\n  \"screenName\": \"screen1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/screens/add?theatreId=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"screens",
+						"add"
+					],
+					"query": [
+						{
+							"key": "theatreId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Screen2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"columns\": 5,\r\n  \"rows\": 4,\r\n  \"screenId\": 0,\r\n  \"screenName\": \"screen2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/screens/add?theatreId=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"screens",
+						"add"
+					],
+					"query": [
+						{
+							"key": "theatreId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movie\": {\r\n    \"movieId\": 5\r\n  },\r\n  \"showDate\": \"2021-04-29\",\r\n  \"showEndTime\": \"2021-04-29 10:00:00\",\r\n  \"showId\": 0,\r\n  \"showName\": \"FirstShow\",\r\n  \"showStartTime\": \"2021-04-29 08:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/shows/add?theatreId=4&screenId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"shows",
+						"add"
+					],
+					"query": [
+						{
+							"key": "theatreId",
+							"value": "4"
+						},
+						{
+							"key": "screenId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movie\": {\r\n    \"movieId\": 5\r\n  },\r\n  \"showDate\": \"2021-04-29\",\r\n  \"showEndTime\": \"2021-04-29 12:00:00\",\r\n  \"showId\": 0,\r\n  \"showName\": \"SecondShow\",\r\n  \"showStartTime\": \"2021-04-29 10:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/shows/add?theatreId=4&screenId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"shows",
+						"add"
+					],
+					"query": [
+						{
+							"key": "theatreId",
+							"value": "4"
+						},
+						{
+							"key": "screenId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookingDate\": \"2021-04-27\",\r\n  \"show\": {\r\n    \"showId\": 8\r\n  },\r\n  \"totalCost\": 0,\r\n  \"transactionId\": 0,\r\n  \"transactionMode\": \"Online\",\r\n  \"transactionStatus\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/booking/insert?customerId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"booking",
+						"insert"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seat1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"price\": 150,\r\n  \"seatId\": 0,\r\n  \"seatNumber\": \"C01\",\r\n  \"status\": \"AVAILABLE\",\r\n  \"type\": \"Back\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/seats/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"seats",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seat2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"price\": 100,\r\n  \"seatId\": 0,\r\n  \"seatNumber\": \"C02\",\r\n  \"status\": \"AVAILABLE\",\r\n  \"type\": \"Front\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/seats/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"seats",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seat3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"price\": 120,\r\n  \"seatId\": 0,\r\n  \"seatNumber\": \"C03\",\r\n  \"status\": \"AVAILABLE\",\r\n  \"type\": \"Middle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/seats/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"seats",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"booking\": {\r\n    \"transactionId\": 10\r\n  },\r\n  \"noOfSeats\": 2,\r\n  \"seats\": [\r\n    {\r\n      \"seatId\": 11\r\n    },\r\n    {\r\n      \"seatId\": 12\r\n    }\r\n  ],\r\n  \"ticketId\": 0,\r\n  \"ticketStatus\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/tickets/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tickets",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TotalCost In Booking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/booking/cost/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"booking",
+						"cost",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

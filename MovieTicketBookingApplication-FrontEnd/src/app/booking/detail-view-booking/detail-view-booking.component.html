@@ -1,0 +1,33 @@
+<section id="detailMovie">
+  <div class="container">
+    <div class="section-title">
+      <h1><i class="icofont icofont-film"></i>Booking Summary</h1>
+    </div>
+    <hr />
+    <div class="details">
+      <div class="row flexbox-center">
+        <div class="col-lg-7">
+          <div class="movieDetails-content">
+            <h2>Booking Details</h2>
+            <br />
+            <ul>
+              <li>
+                <div class="movieDetail-left">Movie:</div>
+                <div class="movieDetail-right">
+                  <a href="#">{{ booking.show.movie.movieName }}</a>
+                </div>
+              </li>
+              <li>
+                <div class="movieDetail-left">Show Date:</div>
+                <div class="movieDetail-right">{{ booking.show.showDate }}</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/movie']" class="theme-btn"
+        ><i class="icofont-ticket"></i>Back to MOVIES</a
+      >
+    </div>
+  </div>
+</section>
